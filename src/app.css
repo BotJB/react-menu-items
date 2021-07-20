@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 15%;
+  padding: 15px;
+  word-spacing: 15px;
+  max-width: 70%;
+}
+img {
+  max-width: 70px;
+  max-height: 50px;
+}
+h5 {
+  font-style: bold;
+}
