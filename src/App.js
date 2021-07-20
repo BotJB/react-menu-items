@@ -5,25 +5,28 @@ import MenuItems from './MenuItems';
 import data from './data'
 //importing the css
 import './app.css'
-
+const allCategories=["all",...new Set(data.map((item)=>item.category))]
+console.log(allCategories)
 function App() {
   const [items, setItems] = useState(data)
-  const [category,setCategory]=useState([])
- 
+  const [categories,setCategories]=useState(allCategories)
+ //Function to filter the data
   const filterItems = (category) => {
     if (category === 'all') {
-      setItems(items);
+      setItems(data);
       return;
     }
-    const newItems = items.filter((item) => item.category === category);
+    const newItems = data.filter((item) => item.category === category);
     setItems(newItems);
-  };
+  }
   return (
     <main>
       <h1>Our Menu</h1>
+      
       <section>
         <div className="container">
-           <Categories getCategory={filterItems}/>
+          
+           <Categories categories={categories} filterItems={filterItems}/>
 
   <MenuItems items={items}/>
         </div>

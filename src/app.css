@@ -25,3 +25,12 @@ img {
 h5 {
   font-style: bold;
 }
+.filter-btn {
+  margin: 5px;
+  background-color: transparent;
+  color: red;
+  border: 1px solid black;
+  border-radius: 10%;
+  font-size: 15px;
+  padding: 10px;
+}
